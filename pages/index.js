@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>Welcome to my website</div>
-      <BongoCat/>
+      <BongoCat width="40%" height="40%"/>
     </div>
   )
 }
