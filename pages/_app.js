@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/bongo-cat.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
