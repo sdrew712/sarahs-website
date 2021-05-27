@@ -1,10 +1,26 @@
 html,
 body {
-  background-color: #1a1e2d;
+  background-color: #292929;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h1 {
+  color: #a5ea9b;
+  text-align: center;
+}
+
+#one {
+  color: #7ed1e2;
+  text-align: center;
+}
+
+#two {
+  color: #cebbff;
+  text-align: center;
+  padding-bottom: 80px;
 }
 
 a {
