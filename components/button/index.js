@@ -1,29 +1,26 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import MUIButton from '@material-ui/core/Button';
+import { useTheme } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+export default function Button(props) {
+  const theme = useTheme();
+  const tertiaryPalette = theme.palette.tertiary.main
 
-export default function OutlinedButtons() {
-  const classes = useStyles();
+  const styles = {}
+  if (props.color == "tertiary"){
+    if (props.variant == "outlined"){
+      styles.color = tertiaryPalette
+      styles.borderColor = tertiaryPalette  
+    } 
+    else if (props.variant == "contained"){
+      styles.backgroundColor = tertiaryPalette
+    }
+    else {
+      styles.color = tertiaryPalette
+    }
+  }
 
   return (
-    <div className={classes.root}>
-      <Button variant="outlined" color="#ff61d8" href="mc-builds.js"> MC Builds </Button>
-      <Button variant="outlined" color="#569cfa" href="creative-writing.js"> Creative Writing </Button>
-      <Button variant="outlined" color="#ffcc81" href="music.js"> Music </Button>
-      {/* <Button variant="outlined" disabled>
-        Disabled
-      </Button>
-      <Button variant="outlined" color="primary" href="#outlined-buttons">
-        Link
-      </Button> */}
-    </div>
+    <MUIButton {...props} style={styles}> {props.text} </MUIButton>
   );
 }

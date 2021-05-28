@@ -18,7 +18,9 @@ export default function Home() {
       <p id="one">I'm Sarah Drew, a developer from the <strike>b</strike>East Coast. Here you can find all of my creative projects.</p>
       <p id="two">Kick back and have a look around!</p>
       <BongoCat width="40%" height="40%"/>
-      <Button variant="outlined"></Button>
+      <Button text="bllblb" variant="outlined" size="large" color="primary"/>
+      <Button text="ydfsgu" variant="outlined" size="large" color="secondary"/>
+      <Button text="sdafgh"  size="large" color="tertiary"/>
     </div>
   )
 }
